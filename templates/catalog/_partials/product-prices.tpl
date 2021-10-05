@@ -47,9 +47,7 @@
 
         <div class="current-price">
 
-            {assign var='goodprice' value=($product.rounded_display_price)-($product.ecotax.amount|number_format:2:".":","*1.2)}
 
-            <span itemprop="price" content="{$product.rounded_display_price}"> {$goodprice|number_format:2} TTC</span>
 
           {if $product.has_discount}
             {if $product.discount_type === 'percentage'}

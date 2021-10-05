@@ -83,8 +83,6 @@
               {hook h='displayProductPriceBlock' product=$product type="before_price"}
 
               <span class="sr-only">{l s='Price' d='Shop.Theme.Catalog'}</span>
-                {assign var='goodprice' value=($product.price|replace:",":".")-($product.ecotax.amount|number_format:2:".":","*1.2)}
-              <span itemprop="price" class="price">{$goodprice|number_format:2} TTC</span><br />
 
               {hook h='displayProductPriceBlock' product=$product type='unit_price'}
 
